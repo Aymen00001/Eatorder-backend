@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Number Verification</title>
+  </head>
+  <body>
+    <h1>Phone Number Verification</h1>
+    <p>Please enter your phone number to verify your account.</p>
+    <p>User ID: <%= userId %></p>
+    <p>Access Token: <%= accessToken %></p>
+    <form action="/client/verify-phone/<%= userId %>" method="post">
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" name="phoneNumber" required />
+
+      <!-- Gender Selection -->
+      <label for="gender">Gender:</label>
+      <input type="radio" id="gender" name="gender" value="Homme" />
+      <label >Homme</label>
+      <input type="radio" id="gender" name="gender" value="Femme" />
+      <label >Femme</label>
+
+      <button type="submit">Verify</button>
+    </form>
+  </body>
+</html>
